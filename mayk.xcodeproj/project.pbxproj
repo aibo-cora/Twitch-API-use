@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DEE3353C2543687F002C1D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3353B2543687F002C1D3E /* AppDelegate.swift */; };
-		DEE3353E2543687F002C1D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3353D2543687F002C1D3E /* SceneDelegate.swift */; };
-		DEE335402543687F002C1D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3353F2543687F002C1D3E /* ViewController.swift */; };
+		DEE335402543687F002C1D3E /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3353F2543687F002C1D3E /* Streaming.swift */; };
 		DEE335432543687F002C1D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE335412543687F002C1D3E /* Main.storyboard */; };
 		DEE3354525436881002C1D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE3354425436881002C1D3E /* Assets.xcassets */; };
 		DEE3354825436881002C1D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE3354625436881002C1D3E /* LaunchScreen.storyboard */; };
@@ -18,8 +17,7 @@
 /* Begin PBXFileReference section */
 		DEE335382543687F002C1D3E /* mayk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mayk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE3353B2543687F002C1D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEE3353D2543687F002C1D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEE3353F2543687F002C1D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEE3353F2543687F002C1D3E /* Streaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
 		DEE335422543687F002C1D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEE3354425436881002C1D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEE3354725436881002C1D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,22 @@
 		DEE3353A2543687F002C1D3E /* mayk */ = {
 			isa = PBXGroup;
 			children = (
+				DEE3355325436914002C1D3E /* View */,
 				DEE3353B2543687F002C1D3E /* AppDelegate.swift */,
-				DEE3353D2543687F002C1D3E /* SceneDelegate.swift */,
-				DEE3353F2543687F002C1D3E /* ViewController.swift */,
 				DEE335412543687F002C1D3E /* Main.storyboard */,
 				DEE3354425436881002C1D3E /* Assets.xcassets */,
 				DEE3354625436881002C1D3E /* LaunchScreen.storyboard */,
 				DEE3354925436881002C1D3E /* Info.plist */,
 			);
 			path = mayk;
+			sourceTree = "<group>";
+		};
+		DEE3355325436914002C1D3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEE3353F2543687F002C1D3E /* Streaming.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +107,7 @@
 				};
 			};
 			buildConfigurationList = DEE335332543687F002C1D3E /* Build configuration list for PBXProject "mayk" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -137,9 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEE335402543687F002C1D3E /* ViewController.swift in Sources */,
+				DEE335402543687F002C1D3E /* Streaming.swift in Sources */,
 				DEE3353C2543687F002C1D3E /* AppDelegate.swift in Sources */,
-				DEE3353E2543687F002C1D3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ghafla.mayk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ghafla.mayk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
