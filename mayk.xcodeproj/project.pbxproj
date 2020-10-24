@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13FC7C5635D736EC96834004 /* Pods_mayk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F2229E02131CCA6A5B98DB /* Pods_mayk.framework */; };
+		DE309E2025436ED600A19CEF /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DE309E1F25436ED600A19CEF /* Notes */; };
+		DE309E24254373D200A19CEF /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE309E23254373D200A19CEF /* CellView.swift */; };
+		DE309E282543885B00A19CEF /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE309E272543885B00A19CEF /* Stream.swift */; };
 		DEE3353C2543687F002C1D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3353B2543687F002C1D3E /* AppDelegate.swift */; };
 		DEE335402543687F002C1D3E /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3353F2543687F002C1D3E /* Streaming.swift */; };
 		DEE335432543687F002C1D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE335412543687F002C1D3E /* Main.storyboard */; };
@@ -15,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C26E83D501B876BB45C176C /* Pods-mayk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mayk.debug.xcconfig"; path = "Target Support Files/Pods-mayk/Pods-mayk.debug.xcconfig"; sourceTree = "<group>"; };
+		81090DC4F366496A703B26C7 /* Pods-mayk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mayk.release.xcconfig"; path = "Target Support Files/Pods-mayk/Pods-mayk.release.xcconfig"; sourceTree = "<group>"; };
+		C1F2229E02131CCA6A5B98DB /* Pods_mayk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mayk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE309E1F25436ED600A19CEF /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		DE309E23254373D200A19CEF /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		DE309E272543885B00A19CEF /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		DEE335382543687F002C1D3E /* mayk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mayk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE3353B2543687F002C1D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE3353F2543687F002C1D3E /* Streaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
@@ -29,17 +39,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FC7C5635D736EC96834004 /* Pods_mayk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5B7406B1FE2D6843A72EF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1F2229E02131CCA6A5B98DB /* Pods_mayk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5BEA131FD00C8E2E0F2B866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C26E83D501B876BB45C176C /* Pods-mayk.debug.xcconfig */,
+				81090DC4F366496A703B26C7 /* Pods-mayk.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE309E262543884100A19CEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE309E272543885B00A19CEF /* Stream.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DEE3352F2543687F002C1D3E = {
 			isa = PBXGroup;
 			children = (
 				DEE3353A2543687F002C1D3E /* mayk */,
 				DEE335392543687F002C1D3E /* Products */,
+				A5BEA131FD00C8E2E0F2B866 /* Pods */,
+				0D5B7406B1FE2D6843A72EF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +93,8 @@
 		DEE3353A2543687F002C1D3E /* mayk */ = {
 			isa = PBXGroup;
 			children = (
+				DE309E1F25436ED600A19CEF /* Notes */,
+				DE309E262543884100A19CEF /* Model */,
 				DEE3355325436914002C1D3E /* View */,
 				DEE3353B2543687F002C1D3E /* AppDelegate.swift */,
 				DEE335412543687F002C1D3E /* Main.storyboard */,
@@ -68,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE3353F2543687F002C1D3E /* Streaming.swift */,
+				DE309E23254373D200A19CEF /* CellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -79,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEE3354C25436881002C1D3E /* Build configuration list for PBXNativeTarget "mayk" */;
 			buildPhases = (
+				3C49E8BCC239D1B7DD793A49 /* [CP] Check Pods Manifest.lock */,
 				DEE335342543687F002C1D3E /* Sources */,
 				DEE335352543687F002C1D3E /* Frameworks */,
 				DEE335362543687F002C1D3E /* Resources */,
+				7D779E3E7A958D31FEC95768 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,11 +175,54 @@
 			files = (
 				DEE3354825436881002C1D3E /* LaunchScreen.storyboard in Resources */,
 				DEE3354525436881002C1D3E /* Assets.xcassets in Resources */,
+				DE309E2025436ED600A19CEF /* Notes in Resources */,
 				DEE335432543687F002C1D3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C49E8BCC239D1B7DD793A49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mayk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D779E3E7A958D31FEC95768 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mayk/Pods-mayk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mayk/Pods-mayk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mayk/Pods-mayk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEE335342543687F002C1D3E /* Sources */ = {
@@ -144,6 +231,8 @@
 			files = (
 				DEE335402543687F002C1D3E /* Streaming.swift in Sources */,
 				DEE3353C2543687F002C1D3E /* AppDelegate.swift in Sources */,
+				DE309E24254373D200A19CEF /* CellView.swift in Sources */,
+				DE309E282543885B00A19CEF /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +376,7 @@
 		};
 		DEE3354D25436881002C1D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C26E83D501B876BB45C176C /* Pods-mayk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +396,7 @@
 		};
 		DEE3354E25436881002C1D3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81090DC4F366496A703B26C7 /* Pods-mayk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
