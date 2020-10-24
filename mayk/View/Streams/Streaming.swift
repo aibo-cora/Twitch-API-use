@@ -117,17 +117,14 @@ extension Streaming: UITableViewDelegate, UITableViewDataSource {
         
         if let username = stream.username {
             let streamText = "https://www.twitch.tv/" + username
+            guard let showStreamView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BrowserID") as? Browser else {return}
+            let navigation = UINavigationController(rootViewController: showStreamView)
             
-            if let streamURL = URL(string: streamText) {
-                let videoPlayer = AVPlayer(url: streamURL)
-                let videoController = AVPlayerViewController()
+            showStreamView.modalPresentationStyle = .fullScreen
+            showStreamView.streamWebURL = URL(string: streamText)
+            
+            present(navigation, animated: true) {
                 
-                videoController.player = videoPlayer
-                
-                present(videoController, animated: true) {
-                    print(streamURL)
-                    videoPlayer.play()
-                }
             }
         }
     }
