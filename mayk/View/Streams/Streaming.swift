@@ -28,6 +28,8 @@ class Streaming: UIViewController {
     }
     
     @IBAction func fetchStreams(_ sender: Any) {
+        streams.removeAll()
+        
         let clientID = "41l4s7i4hz20jj82vew5m5c6sr5t9t"
         let token = "q47vzaymcqk1sw1ox02oe54ehs7h5s"
         
